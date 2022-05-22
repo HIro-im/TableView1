@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // Cellに表示するのは配列の中身で、indexPath.rowを要素数にして引き出した値をCellに当てはめている
-    // Cellは入れ物で、配列とindexPathが紐付いている(ので、選択時のindexPath.rowがわかれば、そのデータが取れる)
+    // Cellは入れ物で、配列とindexPathが紐付いているので、選択時のindexPath.rowがわかれば、そのデータが取れる
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Testcell", for: indexPath)
         cell.textLabel?.text = languages[indexPath.row]
